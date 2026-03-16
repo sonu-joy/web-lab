@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+<title>Calculator</title>
+<script>
+	function checkValue()
+	{
+		let Num1 = document.getElementById("ele1").value;
+		let op = document.getElementById("op").value;
+		let Num2 = document.getElementById("ele2").value;
+		let ans;
+		if(op == '+')
+		{
+				ans=Number(Num1)+Number(Num2);
+		}
+		else if(op == '-')
+		{
+			ans=Number(Num1)-Number(Num2);	
+		}
+		else if(op == '*')
+		{
+			ans=Number(Num1)*Number(Num2);	
+		}
+		else if(op == '/')
+		{
+			ans=Number(Num1)/Number(Num2);
+		}
+		document.getElementById("p").innerHTML="The Answer is :"+ans;
+	}
+</script>
+</head>
+<body>
+	First Number:<input type="text" id="ele1"><br><br>
+	Operator(+, - , * , /):<input type="text" id="op"><br><br>
+	Second Number:<input type="text" id="ele2"><br><br>
+	<input type="button" value="submit" onclick=checkValue()>
+	<p id="p"></p>
+</body>
+</html>

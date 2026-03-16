@@ -1,0 +1,15 @@
+body{
+	background-color:black;
+	table{
+		color:red;
+		border:1px solid red;
+		background-color:white;
+		}	
+	}
+h1{
+	text-align:center;
+	color:Yellow;
+}
+td:hover,th:hover{
+	background-color:yellow;
+	}

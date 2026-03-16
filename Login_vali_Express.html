@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<title>Login_val_Express</title>
+</head>
+<body>
+	Username:<input type="text" id="user" placeholder="UserName"><br><br>
+	<p id="p1"></p><br>
+	Password:<input type="Password" id="pass" placeholder="Passworld"><br><br>
+	<p id="p2"></p><br>
+	<button id="submit">submit</button>
+	<p id="p3"></p><br><br>
+	
+<script>
+	document.getElementById("submit").addEventListener("click",function()
+	{
+		document.getElementById("p1").innerHTML="";
+		document.getElementById("p2").innerHTML="";
+		document.getElementById("p3").innerHTML="";
+		let user = document.getElementById("user").value;
+		let pattern = /^\w+@\w+\.\w+$/;
+		let pass = document.getElementById("pass").value;
+		let error =false;
+		if(!pattern.test(user))
+		{
+			document.getElementById("p1").innerHTML="Invalid mail formatt";
+			error = true;
+		}
+		if(pass == "")
+		{
+			document.getElementById("p2").innerHTML="Password Required";
+			error = true;
+		}
+		else if(pass.length <6 || pass.length >8)
+		{
+			document.getElementById("p2").innerHTML="Password Must be 6-8 numbers";
+			error= true;
+		}
+		if(!error)
+		{
+			document.getElementById("p3").innerHTML="Login Success!";
+		}
+	});
+</script>
+
+</body>
+</html>
